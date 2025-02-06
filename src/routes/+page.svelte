@@ -27,7 +27,7 @@
   .nav {
     display: flex;
     justify-content: center;
-    background: #7a26aa;
+    background: #3d3d3d;
     padding: 10px;
   }
   .nav a {
@@ -49,7 +49,7 @@
     gap: 10px;
     overflow-x: auto;
     padding: 10px;
-    background-color: #7d138b;
+    background-color: #353535;
   }
   .movie-card {
     flex: 0 0 auto;
