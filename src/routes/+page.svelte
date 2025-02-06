@@ -95,18 +95,17 @@
   }
 </style>
 
-<div class="header">Movie Gallery</div>
+<div class="header">Letterinbox</div>
 
 <nav class="nav">
-  <a href="#">Home</a>
-  <a href="#">Movies</a>
-  <a href="#">About</a>
-  <a href="#">Contact</a>
+  <a href="#">Inicio</a>
+  <a href="#">Filmes</a>
+  <a href="#">Sobre</a>
 </nav>
 
 <div class="main">
-  <h2>Welcome to the Movie Gallery</h2>
-  <p>Browse our collection of amazing movies.</p>
+  <h2>Bem vindo ao Letterinbox</h2>
+  <p>Sua maior galeria de filmes de terror</p>
 </div>
 
 <div class="gallery">
@@ -118,4 +117,4 @@
   {/each}
 </div>
 
-<div class="footer">© 2025 Movie Gallery. All rights reserved.</div>
+<div class="footer">Letterinbox</div>
