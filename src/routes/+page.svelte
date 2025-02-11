@@ -1,120 +1,61 @@
 <script>
-  let movies = [
-    { title: "Nosferatu", image: "nosferatu.jpg", description: "A classic silent horror film." },
-    { title: "The Brutalist", image: "brutalist.jpg", description: "A dramatic architectural story." },
-    { title: "The Count of Monte Cristo", image: "montecristo.jpg", description: "A tale of revenge and justice." },
-    { title: "Nickel Boys", image: "nickelboys.jpg", description: "A powerful historical drama." },
-    { title: "Babygirl", image: "babygirl.jpg", description: "A heartfelt coming-of-age story." },
-    { title: "Hard Truths", image: "hardtruths.jpg", description: "A gripping documentary." }
+  let filmes = [
+      { titulo: "Filme 1", imagem: "https://via.placeholder.com/200" },
+      { titulo: "Filme 2", imagem: "https://via.placeholder.com/200" },
+      { titulo: "Filme 3", imagem: "https://via.placeholder.com/200" }
   ];
 </script>
 
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: white;
-    margin: 0;
-    padding: 0;
+  header {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
   }
-  .header {
-    text-align: center;
-    padding: 20px;
-    background-color: #111;
-    font-size: 24px;
-    font-weight: bold;
+  nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
   }
-  .nav {
-    display: flex;
-    justify-content: center;
-    background: #3d3d3d;
-    padding: 10px;
+  .container {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      text-align: center;
   }
-  .nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 18px;
+  .movie-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
   }
-  .nav a:hover {
-    text-decoration: underline;
+  .movie {
+      background: #ddd;
+      padding: 15px;
+      border-radius: 5px;
   }
-  .main {
-    padding: 20px;
-    text-align: center;
-    background-color: #111;
+  .movie img {
+      width: 100%;
+      border-radius: 5px;
   }
-  .gallery {
-    display: flex;
-    gap: 10px;
-    overflow-x: auto;
-    padding: 10px;
-    background-color: #353535;
-  }
-  .movie-card {
-    flex: 0 0 auto;
-    width: 180px;
-    height: 280px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 5px;
-    position: relative;
-    cursor: pointer;
-  }
-  .movie-title {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    width: 100%;
-    text-align: center;
-    font-size: 14px;
-    padding: 5px;
-  }
-  .movie-info {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 20px;
-    text-align: center;
-    border-radius: 5px;
-  }
-  .movie-card:hover .movie-info {
-    display: block;
-  }
-  .footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #111;
-    font-size: 14px;
+  .movie h3 {
+      margin-top: 10px;
   }
 </style>
 
-<div class="header">Letterinbox</div>
-
-<nav class="nav">
-  <a href="#">Inicio</a>
-  <a href="#">Filmes</a>
-  <a href="#">Sobre</a>
-</nav>
-
-<div class="main">
-  <h2>Bem vindo ao Letterinbox</h2>
-  <p>Sua maior galeria de filmes de terror</p>
+<div class="container">
+  <h2>Confira os filmes mais populares!</h2>
+  <div class="movie-list">
+      {#each filmes as filme}
+          <div class="movie">
+              <img src={filme.imagem} alt={filme.titulo} />
+              <h3>{filme.titulo}</h3>
+          </div>
+      {/each}
+  </div>
 </div>
-
-<div class="gallery">
-  {#each movies as movie}
-    <div class="movie-card" style="background-image: url({movie.image})">
-      <div class="movie-title">{movie.title}</div>
-      <div class="movie-info">{movie.description}</div>
-    </div>
-  {/each}
-</div>
-
-<div class="footer">Letterinbox</div>
