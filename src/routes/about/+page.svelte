@@ -1,4 +1,5 @@
 
+<div class="background"></div>
 <div class="container">
     <h1 class="text-center my-5">Sobre o Site</h1>
     <p class="text-center mx-auto w-75">
@@ -67,15 +68,28 @@
       padding-left: 20px;
     }
   
-    footer {
+     footer {
       background-color: #333;
       color: white;
       text-align: center;
-      padding: 15px;
-      position: fixed;
+      padding: 10px; 
+      position: relative; 
       width: 100%;
-      bottom: 0;
+    }
+   
+
+     .background {
+      position: fixed;
+      top: 0;
       left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      z-index: -1;
+    }
+     .content {
+      flex: 1;
+      margin-bottom: 50px; 
     }
   </style>
   

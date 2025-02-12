@@ -17,20 +17,30 @@
         }
         .content {
             flex: 1;
+            margin-bottom: 50px; 
         }
         footer {
-      background-color: #333;
-      color: white;
-      text-align: center;
-      padding: 15px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px; 
+    position: relative; 
+    width: 100%;
+}
+    .background {
       position: fixed;
-      width: 100%;
-      bottom: 0;
+      top: 0;
       left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      z-index: -1;
     }
+
     </style>
 </head>
 <body class="d-flex flex-column min-vh-100">
+    <div class="background"></div>
     <div class="wrapper flex-grow-1">
         <div class="container my-5">
             <h1 class="text-center">Contato</h1>

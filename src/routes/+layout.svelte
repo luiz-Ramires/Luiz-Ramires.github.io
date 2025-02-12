@@ -41,7 +41,7 @@
   .logo {
     font-size: 6rem;
     font-weight: bold;
-    color: white;
+    color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
     padding: 20px;
     display: inline-block;
@@ -51,11 +51,11 @@
     list-style: none;
   }
   .nav-item {
-    font-size: 2rem;
-    color: white;
+    font-size: 1,5rem;
+    color: rgb(255, 255, 255);
     text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
     padding: 20px 40px;
-    margin: 0 10px;
+    margin: 1px;
     border-radius: 5px;
     text-decoration: none;
   }
